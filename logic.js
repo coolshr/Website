@@ -68,16 +68,18 @@ $(document).ready(function() {
 
 
     $("#sub_btn").click(function() {
-        if (a == 0) {
-            $("#review_table").append("<tr ><th>Name</th><th>Skill</th><th>Proficiency</th></tr>");
-            a = 1;
-        }
-
         var name = document.getElementById('username').value;
         if (name == "") {
             alert("Please enter a name");
             return;
         }
+        if (a == 0) {
+            $("#review_table").append("<tr ><th>Name</th><th>Skill</th><th>Proficiency</th></tr>");
+            a = 1;
+
+        }
+
+
         var skill = document.getElementById('skill').value;
         var level = document.getElementById('level').value;
 
